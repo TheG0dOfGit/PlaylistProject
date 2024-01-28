@@ -11,6 +11,7 @@ public class Playlist
      * declaring instance variables
      */
     private ArrayList<Song> Playlist;
+    private ArrayList<Song> oneArtistPlaylist;
     private int duration;
     
     /**
@@ -165,6 +166,26 @@ public class Playlist
                 song.unlike();
             }
         }
+    }
+
+    /** 
+     * method artistPlaylist(String goodArtist) creates a new ArrayList filled with songs of a given artist from the original ArrayList.
+     * This function is based on a function I commonly use on Apple Music "smart playlist", where you can create a playlist of a specific artist's songs by inputting the artist. 
+     * 
+     * @param goodArtist the artist whose songs will populate the new ArrayList
+     */
+    public ArrayList artistPlaylist(String goodArtist)
+    {
+        oneArtistPlaylist = new ArrayList<Song>();
+        for (Song song : Playlist)
+        {
+            if (song.getArtist() == goodArtist)
+            {
+                oneArtistPlaylist.add(song);
+                System.out.println(song);
+            }
+        }
+        return oneArtistPlaylist;
     }
 }
 
