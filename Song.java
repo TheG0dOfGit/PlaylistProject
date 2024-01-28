@@ -11,8 +11,7 @@ public class Song
     private String artist;
     private boolean like;
     /**
-     * Constructor-- what information needs to be given to make a Song?
-     * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
+     * Constructs a song under a certain title, duration, artist, and like status
      */
     public Song (String title, String duration, String artist, boolean like)
     {
@@ -22,18 +21,19 @@ public class Song
         like = false;
     }
     /**
-      * Methods-- what will you want each Song to do?
-      * Consider all the getter methods (getName, getArtist, etc.)
-      * You should probably have a toString method to be able to get the information for the full
-      * song easily as well!
-      * What kind of mutator (setter) methods will you need?
+      * The getTitle method gets the title of a chosen song
+      * @return the title of a particular song
       */
    
       public String getTitle()
       {
         return title;
       }
-    public String getTime()
+    /**
+     * The getTime method gets the duration of the referred song
+     * @return the duration of a particular song
+     */
+      public String getTime()
       {
           return duration;
       }
