@@ -22,7 +22,7 @@ public class Song
     }
     /**
       * The getTitle method gets the title of a chosen song
-      * @return the title of a particular song
+      * @return title the title of a particular song
       */
    
       public String getTitle()
@@ -31,13 +31,17 @@ public class Song
       }
     /**
      * The getTime method gets the duration of the referred song
-     * @return the duration of a particular song
+     * @return duration the duration of a particular song
      */
       public String getTime()
       {
           return duration;
       }
-    public int getDurationInSeconds()
+    /**
+     * The getDurationInSeconds method converts a string duration into an int value
+     * @return seconds the int number of seconds of a particular song
+     */
+      public int getDurationInSeconds()
       {
         int seconds = 0;
         String minutesPart = duration.substring(0, duration.indexOf(":"));
@@ -46,11 +50,19 @@ public class Song
         seconds += Integer.parseInt(secondsPart);
         return seconds;
       }
-    public String getArtist()
+    /**
+     * The getArtist method gets the artist of a certain song
+     * @return artist the artist of a particular song
+     */
+      public String getArtist()
       {
         return artist;
       }
-    public boolean isLiked()
+    /**
+     * The isLiked method marks a particular song as "liked" within the playlist
+     * @return like the confirmation of a song under "liked" status
+     */
+      public boolean isLiked()
       {
         return like;
       }
